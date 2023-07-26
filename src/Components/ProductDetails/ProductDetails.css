@@ -3,18 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Bree Serif';
   }
   
   .product-image {
     flex: 1;
     max-width: 400px;
-    margin-right: 20px;
-    
+    margin-right: 20px;    
   }
   
   .product-image img {
     width: 100%;
-    height: 100px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,15 +25,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   
   .product-info h2 {
     margin-bottom: 10px;
+    margin: 10px;
   }
   
   .product-info p {
     font-size: 18px;
     margin-bottom: 5px;
+  }
+  .price {
+    text-decoration: underline;
+    color: red;
+    font-weight: bold;
   }
   
   .product-info button {
@@ -42,6 +49,8 @@
     color: #fff;
     border: none;
     cursor: pointer;
+    font-family: 'Times New Roman';
+    font-size: 20px;
   }
   
   .product-info button:hover {

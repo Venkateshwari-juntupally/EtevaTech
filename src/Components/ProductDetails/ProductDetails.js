@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.js'
+import './ProductDetails.css'
 
 const ProductDetails = ({ products }) => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const ProductDetails = ({ products }) => {
       </div>
       <div className="product-info">
         <h2>{product.name}</h2>
-        <p>Price: ${product.price}</p>
+        <p className='price'>Price: Rs. {product.price}</p>
         <p>Quantity: {product.quantity}</p>
         <button>Add to Cart</button>
       </div>
