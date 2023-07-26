@@ -1,22 +1,15 @@
 // ProductsList.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import productsData from '../../data/products.json';
 import './ProductsList.css'
 
-
-const ProductsList = ({ products }) => {
+const ProductsList = () => {
+  const updatedData = JSON.parse(localStorage.getItem('updatedData'))
+  console.log(updatedData)
   return (
-    <>
-    <div className='logo'>
-      <img
-          className="website-logo"
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-          alt="website logo"
-        />
-      <h1 className='heading'>ECommerce App</h1>
-    </div>
     <div className="product-list">
-      {products.map((product) => (
+      {productsData.map((product) => (
         <div key={product.id} className="product-item">
           <Link to={`/product/${product.id}`}>
             <img src={product.image} alt={product.name} />
@@ -26,9 +19,7 @@ const ProductsList = ({ products }) => {
         </div>
       ))}
     </div>
-    </>
   );
-  
 };
 
 export default ProductsList;

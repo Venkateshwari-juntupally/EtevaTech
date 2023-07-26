@@ -1,19 +1,4 @@
-.heading {
-  text-align: center;
-  color: hsl(246, 80%, 48%);
-}
-.website-logo {
-  height: 100px;
-  width: 200px;
-  margin: 10px;
-}
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  font-family: 'Bree Serif'
-}
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

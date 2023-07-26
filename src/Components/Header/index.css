@@ -1,0 +1,40 @@
+.header {
+    padding: 1rem;
+    border-bottom: solid #f6f3f0;
+  }
+.header-items{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+    
+}
+  .heading{
+    font-weight: 800;
+    color: #100f0e;
+    text-decoration: none;
+  }
+.link-item{
+  font-weight: 400;
+  color: #100f0e;
+
+}
+span{
+    color: #fc8300;
+}
+.heading {
+    text-align: center;
+    color: hsl(246, 80%, 48%);
+  }
+  .website-logo {
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Bree Serif'
+  }

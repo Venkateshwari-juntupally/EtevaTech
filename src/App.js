@@ -1,38 +1,18 @@
-// App.js
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Components/Header';
 import ProductsList from './Components/ProductsList/ProductsList';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import './App.css'
 
-const products = [
-  {id: 1, name: 'Happy House Building Blocks', price: 259, quantity: 1, image: 'https://rukminim2.flixcart.com/image/416/416/kp78e4w0/block-construction/h/f/p/best-buy-happy-house-building-blocks-creative-learning-toy-original-imag3hkumzh5xmbs.jpeg?q=70'},
-  {id: 2, name: 'Jam & Honey Dino, Magenta, 22 cm', price: 479, quantity: 1,  image: 'https://m.media-amazon.com/images/I/81IU5lZIRwL._SX450_.jpg'},
-  {id: 3, name: 'VINCENT CHASE EYEWEAR', price: 678,  quantity: 1, image: 'https://m.media-amazon.com/images/I/41bSyL5qiJS._UL1325_.jpg'},
-  {id: 4, name: 'Kadio Analog Wall Clock', price: 799, quantity: 1,  image: 'https://rukminim2.flixcart.com/image/416/416/l2rwzgw0/wall-clock/r/v/q/classic-designer-108-cola-analog-kadio-original-imagef8f9spcsuk8.jpeg?q=70'},
-  {id: 5, name: 'Running horses Painting', price: 999,  quantity: 1, image: 'https://rukminim2.flixcart.com/image/416/416/xif0q/painting/l/m/8/11-1-sanfk173-saf-original-imagm8ysu4pjcnnx.jpeg?q=70'},
-  {id: 6, name: 'Kurta Pant With Dupatta Set', price: 1499,  quantity: 1, image: 'https://m.media-amazon.com/images/I/81qC3sQyRDL._UY741_.jpg'},
-  {id: 7, name: 'Wheeling System Luggage', price: 1999, quantity: 1,  image: 'https://m.media-amazon.com/images/I/514xUT1xYVL._UL1500_.jpg'},
-  {id: 8, name: 'Full Face Graphic Helmet', price: 2379, quantity: 1,  image: 'https://rukminim2.flixcart.com/image/416/416/khmbafk0-0/helmet/x/t/m/sbh-17-terminator-full-face-graphic-helmet-in-matt-black-fluo-original-imafxhedgn57jgvd.jpeg?q=70'},
-  {id: 9, name: 'HD Display Smart Watch', price: 2999,  quantity: 1, image: 'https://m.media-amazon.com/images/I/610FbWpQu-L._SY450_.jpg'},
-  {id: 10, name: 'Office Table', price: 5290, quantity: 1, image:'https://rukminim2.flixcart.com/image/416/416/xif0q/office-study-table/k/7/y/46-99-high-density-block-board-solid-wood-cup1310-torche-30-matt-original-imagnz3n42yddfm4.jpeg?q=70'},
-  {id: 11, name: 'Peter England Men Regular Fit Blazer',  quantity: 1, price: 8999, image: 'https://m.media-amazon.com/images/I/513wNYojOqL._UY741_.jpg'},
-  {id: 12, name: 'Sofa Set', quantity: 1, price: 19999, image: 'https://rukminim2.flixcart.com/image/416/416/xif0q/sofa-set/g/b/x/-original-imagrgu2yy9y5ndb.jpeg?q=70'},
-  {id: 13, name: 'Kisna Real Solitaire Diamond & Gold Ring for Women', quantity: 1,  price: 27083, image: 'https://m.media-amazon.com/images/I/51vfAr3yiBL._UY575_.jpg'},
-  {id: 14, name: 'Samsung Galaxy S20', price: 34999, quantity: 1, image: 'https://m.media-amazon.com/images/I/81vDZyJQ-4L._SL1500_.jpg'},
-  {id: 15, name: 'Canon EOS M50 Mark', price: 58999,  quantity: 1, image: 'https://rukminim2.flixcart.com/image/312/312/knyxqq80/dslr-camera/r/y/x/digital-camera-eos-m50-mark-ii-eos-m50-mark-ii-canon-original-imag2gzkexzqhyhu.jpeg?q=70'},
-];
-
-
 const App = () => {
-  
   return (
     <div className='container'>
       <Router className='App-header'>
+        <Header/>
       <Routes>
-        <Route path="/" element={<ProductsList products={products} />} />
-        <Route path="/product/:id" element={<ProductDetails products={products} />} />
+        <Route exact path="/" component={ProductDetails} />
+        <Route path="/product/:id" component={ProductsList}/>
       </Routes>
     </Router>
     </div>
