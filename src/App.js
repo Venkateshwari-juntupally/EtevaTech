@@ -11,12 +11,11 @@ const App = () => {
       <Router className='App-header'>
         <Header/>
       <Routes>
-        <Route exact path="/" component={ProductDetails} />
-        <Route path="/product/:id" component={ProductsList}/>
+        <Route exact path="/" Component={ProductsList} />
+        <Route path="/product/:id" Component={ProductDetails}/>
       </Routes>
     </Router>
     </div>
-    
   );
 };
 
